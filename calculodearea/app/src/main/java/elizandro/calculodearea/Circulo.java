@@ -24,6 +24,12 @@ public class Circulo extends AppCompatActivity {
         finish();
     }
 
+
+
+
+
+
+
     public void naook(View clicou){
         finish();
     }
