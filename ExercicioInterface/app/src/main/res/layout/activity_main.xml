@@ -4,15 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="aulaandroid.exerciciointerface.MainActivity">
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#5b7d89">
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/fotinha"/>
-    </RelativeLayout>
+        android:src="@drawable/fotinha"
+        android:background="#BABACA"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:gravity="center_vertical"
+            android:layout_width = "40dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_weight="2"
+                android:src="@drawable/google" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="8">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Salvar em"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="sr.benedett@gmail.com:"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_weight="2"
+                android:src="@drawable/seta"
+                android:layout_height="20dp"
+                android:layout_width="40dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width = "40dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_height="20dp"
+                android:layout_width="30dp"
+                android:layout_weight="2"
+                android:src="@drawable/iconnome" />
+            <EditText
+                android:layout_weight="8"
+                android:hint="Nome"/>
+            <ImageView
+                android:layout_weight="2"
+                android:src="@drawable/seta"
+                android:layout_height="20dp"
+                android:layout_width="40dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width = "40dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <Space
+                android:layout_weight="2" />
+            <EditText
+                android:layout_weight="8"
+                android:hint="Sobrenome"/>
+            <Space
+                android:layout_weight="2"/>
+        </TableRow>
+
+    </TableLayout>
+
     </LinearLayout>

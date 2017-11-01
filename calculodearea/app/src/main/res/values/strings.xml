@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Calculo de area</string>
+    <string name="title_activity_areaquadrado">Areaquadrado</string>
+    <string name="quadrado">Quadrado</string>
+    <string name="triangulo">Triângulo</string>
+    <string name="circulo">Circulo</string>
+    <string name="selecione_a_forma">Selecione a forma</string>
+    <string name="altura">Altura:</string>
+    <string name="base">Base:</string>
+    <string name="avancar">Avançar</string>
+    <string name="informe_os_dados_do_quadrado">Informe os dados do quadrado:</string>
+    <string name="informar_os_dados_do_triangulo">Informar os dados do triângulo:</string>
+    <string name="informe_o_raio_do_circulo">Informe o raio do circulo:</string>
+    <string name="raio">Raio:</string>
+    <string name="comecar_novamente">Começar novamente</string>
+    <string name="ex_2_cm">Ex: 2 cm</string>
+    <string name="ex_5_cm">Ex: 5 cm</string>
+</resources>
