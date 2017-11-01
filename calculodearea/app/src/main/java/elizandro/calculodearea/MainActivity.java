@@ -1,5 +1,6 @@
 package elizandro.calculodearea;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,11 +34,21 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intencao);
         } else if(rgFormas.getCheckedRadioButtonId() == R.id.rbTriangulo){
             Intent intencao = new Intent(getApplicationContext(), AreaTriangulo.class);
-            startActivity(intencao);
+            startActivityForResult(intencao, 2);
 
         }
 
 
+    }
+
+
+    protected  void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 2){
+            if(resultCode == RESULT_OK) {
+                return;
+            }
+        }
     }
 
 }

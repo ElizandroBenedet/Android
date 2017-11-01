@@ -38,6 +38,16 @@ public class AreaCirculo extends AppCompatActivity {
 
         Intent intencao = new Intent(getApplicationContext(), Circulo.class);
         intencao.putExtras(mochila);
-        startActivity(intencao);
+        startActivityForResult(intencao, 6);
+    }
+
+    protected  void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 6 && resultCode == RESULT_OK){
+            setResult(RESULT_OK);
+            finish();
+        }else if(resultCode == RESULT_CANCELED){
+            return;
+        }
     }
 }

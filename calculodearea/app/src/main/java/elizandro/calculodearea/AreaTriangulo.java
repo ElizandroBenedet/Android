@@ -37,6 +37,16 @@ public class AreaTriangulo extends AppCompatActivity {
 
         Intent intencao = new Intent(getApplicationContext(), Triangulo.class);
         intencao.putExtras(mochila);
-        startActivity(intencao);
+        startActivityForResult(intencao, 5);
+    }
+
+    protected  void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 5 && resultCode == RESULT_OK){
+            setResult(RESULT_OK);
+            finish();
+        }else{
+            return;
+        }
     }
 }

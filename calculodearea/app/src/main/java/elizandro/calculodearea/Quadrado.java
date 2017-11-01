@@ -1,5 +1,6 @@
 package elizandro.calculodearea;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,9 +21,15 @@ public class Quadrado extends AppCompatActivity {
     }
 
     public void Reiniciar(View cliclou){
-        Intent intencao = new Intent(getApplicationContext(), MainActivity.class);
-        intencao.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intencao);
+        setResult(RESULT_OK);
+        finish();
     }
+
+    public void naook(View clicou){
+        setResult(RESULT_CANCELED);
+        finish();
+    }
+
+
 
 }

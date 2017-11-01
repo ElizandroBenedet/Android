@@ -1,5 +1,6 @@
 package elizandro.calculodearea;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +38,16 @@ public class AreaQuadrado extends AppCompatActivity {
 
         Intent intencao = new Intent(getApplicationContext(), Quadrado.class);
         intencao.putExtras(mochila);
-        startActivity(intencao);
+        startActivityForResult(intencao, 3);
+    }
+
+    protected  void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 3 && resultCode == RESULT_OK){
+            setResult(RESULT_OK);
+            finish();
+        }else{
+                return;
+        }
     }
 }
