@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Auto No Mia</string>
+    <string name="_0_00">0.00</string>
+    <string name="adicionar_abastecimento">Adicionar abastecimento</string>
+    <string name="km_l">Km/L</string>
+    <string name="visualizar_abastecimento">Visualizar abastecimento</string>
+
+    <string-array name="postos">
+        <item>Bandeira do posto</item>
+        <item>Ipiranga</item>
+        <item>TEXACO</item>
+        <item>Petrobras</item>
+        <item>Shell</item>
+        <item>Outros</item>
+    </string-array>
+
+</resources>

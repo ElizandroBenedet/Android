@@ -46,7 +46,7 @@ public class AreaCirculo extends AppCompatActivity {
         if(requestCode == 6 && resultCode == RESULT_OK){
             setResult(RESULT_OK);
             finish();
-        }else if(resultCode == RESULT_CANCELED){
+        }else if(resultCode == RESULT_CANCELED){    
             return;
         }
     }
