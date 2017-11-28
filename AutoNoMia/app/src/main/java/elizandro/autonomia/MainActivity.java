@@ -14,8 +14,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Double litros= 0.0;
-    private Double Km = 0.0;
+
 
 
     @Override
@@ -33,29 +32,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume(){
 
 
-        NumberFormat decimal = NumberFormat.getInstance();
-        decimal.setMaximumFractionDigits(2);
-        decimal.setMinimumIntegerDigits(1);
-        decimal.setRoundingMode(RoundingMode.HALF_UP);
-
 
         TextView tvAuto = (TextView) findViewById(R.id.tvAuto);
 
         int i = ListaDeAbastecimentos.listaAbastece.size();
-        if(i > 1) {
-            this.litros += ListaDeAbastecimentos.listaAbastece.get(i - 1).getLitros();
-            this.Km += (ListaDeAbastecimentos.listaAbastece.get(i - 1).getQuilometragem()
-                    - ListaDeAbastecimentos.listaAbastece.get(i - 2).getQuilometragem());
-            Double autonomia = this.Km / this.litros;
+        if(i > 1){
+            Double quilo = ListaDeAbastecimentos.listaAbastece.get(i-1).getQuilometragem() -
+                    ListaDeAbastecimentos.listaAbastece.get(0).getQuilometragem();
+            Double litro = ListaDeAbastecimentos.listaAbastece.get(i-2).getLitros();
 
-            tvAuto.setText(decimal.format(autonomia).toString());
+            Double autonomia = quilo / litro;
+            tvAuto.setText(String.format("%.2f", autonomia));
         }
-
-
-
-
-
-
         super.onResume();
     }
 
