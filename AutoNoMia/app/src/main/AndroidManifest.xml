@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddAbastecimento" />
-        <activity android:name=".ListaDeAbastecimentos"></activity>
+        <activity android:name=".ListaDeAbastecimentos" />
+        <activity android:name=".addPosto" />
+        <activity android:name=".ListadePostos" />
+        <activity android:name=".mostraAbastecimento"></activity>
     </application>
 
 </manifest>

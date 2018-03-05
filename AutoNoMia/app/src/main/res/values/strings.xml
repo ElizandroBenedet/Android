@@ -6,12 +6,12 @@
     <string name="visualizar_abastecimento">Visualizar abastecimento</string>
 
     <string-array name="postos">
-        <item>Bandeira do posto</item>
         <item>Ipiranga</item>
         <item>TEXACO</item>
         <item>Petrobras</item>
         <item>Shell</item>
         <item>Outros</item>
     </string-array>
+
 
 </resources>

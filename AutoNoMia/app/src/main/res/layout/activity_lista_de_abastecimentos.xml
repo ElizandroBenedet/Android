@@ -6,6 +6,28 @@
     android:layout_height="match_parent"
     tools:context="elizandro.autonomia.ListaDeAbastecimentos">
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btAddAbastecimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:onClick="AddBastecimento"
+        app:backgroundTint="@android:color/darker_gray"
+        app:elevation="5dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/colorAccent"
+        app:srcCompat="@drawable/ic_plus_circle_black_36dp" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvLista"
         android:layout_width="0dp"
@@ -18,11 +40,12 @@
         android:layout_marginTop="8dp"
         android:clipChildren="true"
         android:clipToPadding="true"
+        android:onClick="AddBastecimento"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

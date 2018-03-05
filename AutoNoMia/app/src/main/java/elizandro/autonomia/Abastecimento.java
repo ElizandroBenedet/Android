@@ -1,31 +1,35 @@
 package elizandro.autonomia;
 
-import java.util.ArrayList;
+import io.realm.RealmObject;
 
 /**
  * Created by elizandro on 22/11/17.
  */
 
-public class Abastecimento {
-    private String posto;
+public class Abastecimento extends RealmObject{
+
+
+    private Posto posto;
     private Double litros;
-    private  String data;
+    private String data;
     private Double quilometragem;
+    private String combustivel;
+    private Double preco;
+    private int ID;
 
-
-    public Abastecimento(Double quilometragem, Double litros, String data, String posto ){
-        this.posto = posto;
+    public Abastecimento(){}
+    public Abastecimento(Double quilometragem, Double litros, String data, String Combustivel, Posto posto, int ID){
+        this.combustivel = Combustivel;
         this.data = data;
         this.quilometragem = quilometragem;
         this.litros = litros;
-    }
-
-    public String getPosto() {
-        return posto;
-    }
-
-    public void setPosto(String posto) {
         this.posto = posto;
+        this.setID(ID);
+        if(combustivel.equals("Gasolina")){
+            this.preco = litros * posto.getPrecoGasolina();
+        }else if(combustivel.equals("Alcool")){
+            this.preco =litros * posto.getPrecoAlcool();
+        }
     }
 
     public Double getLitros() {
@@ -50,5 +54,37 @@ public class Abastecimento {
 
     public void setQuilometragem(Double quilometragem) {
         this.quilometragem = quilometragem;
+    }
+
+    public String getCombustivel() {
+        return combustivel;
+    }
+
+    public void setCombustivel(String combustivel) {
+        this.combustivel = combustivel;
+    }
+
+    public Posto getPosto() {
+        return posto;
+    }
+
+    public void setPosto(Posto posto) {
+        this.posto = posto;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 }
